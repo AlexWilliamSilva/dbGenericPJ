@@ -105,7 +105,7 @@ CREATE TABLE ordem_servico (
 
 -- Tabela compra
 CREATE TABLE compra (
-    id_compra INT PRIMARY KEY AUTO_INCREMENT  NOT NULL,
+    id_compra INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     data_compra DATETIME NOT NULL,
     id_for INT,
     id_usu INT,
