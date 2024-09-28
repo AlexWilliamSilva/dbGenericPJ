@@ -1,16 +1,4 @@
--- CREATE DATABASE dbTest;
-
--- CREATE TABLE dbtest.Cliente (
---     id_cli INT AUTO_INCREMENT NOT NULL,
---     data_cadastro_cli DATE,
---     nome_cli VARCHAR(255) NOT NULL,
---     nome_social VARCHAR(255),
---     email_cli VARCHAR(255) NOT NULL,
---     telefone_cli VARCHAR(15) NOT NULL,
--- 	   celular_cli VARCHAR
-
--- );
-
+-- SQLBook: Code
 CREATE DATABASE dbTest;
 
 -- Tabela Cliente
@@ -85,7 +73,7 @@ CREATE TABLE dbTest.Servico (
 );
 
 -- Tabela items_os
-CREATE TABLE items_os (
+CREATE TABLE dbTest.Items_os (
     id_ordem INT,
     id_serv INT,
     preco_items_os DECIMAL(10,2) NOT NULL,
@@ -94,7 +82,7 @@ CREATE TABLE items_os (
 );
 
 -- Tabela ordem_servico
-CREATE TABLE ordem_servico (
+CREATE TABLE dbTest.Ordem_servico (
     id_ordem INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     id_cli INT,
     id_usu INT,
@@ -104,7 +92,7 @@ CREATE TABLE ordem_servico (
 );
 
 -- Tabela compra
-CREATE TABLE compra (
+CREATE TABLE dbTest.Compra (
     id_compra INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     data_compra DATETIME NOT NULL,
     id_for INT,
@@ -116,7 +104,7 @@ CREATE TABLE compra (
 );
 
 -- Tabela items_compra
-CREATE TABLE items_compra (
+CREATE TABLE dbTest.Items_compra (
     id_compra INT,
     id_prod INT,
     preco_items_compra DECIMAL(10,2) NOT NULL,
@@ -125,7 +113,7 @@ CREATE TABLE items_compra (
 );
 
 -- Tabela pedidos
-CREATE TABLE pedidos (
+CREATE TABLE dbTest.Pedido (
     id_ped INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     data_ped DATETIME NOT NULL,
     id_cli INT,
@@ -137,7 +125,7 @@ CREATE TABLE pedidos (
 );
 
 -- Tabela items_pedido
-CREATE TABLE items_pedido (
+CREATE TABLE dbTest.items_pedido (
     id_ped INT,
     id_prod INT,
     preco_vendido DECIMAL(10,2) NOT NULL,
